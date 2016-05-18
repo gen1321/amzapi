@@ -32,11 +32,7 @@ class Spreadsheet < ActiveRecord::Base
   end
 
   def setRetailValue
-    ASIN::Configuration.configure do |config|
-      config.secret        = 'oNhYNXuS4FjvVgSHoPp9383MmqcmmXsJfpw0t6uH'
-      config.key           = 'AKIAI42PXZ2Q3M2SUVBQ'
-      config.associate_tag = 'mborisbeginin-20'
-    end
+
   client = ASIN::Client.instance
     count = 0
     stack = []
